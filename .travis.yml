@@ -3,5 +3,5 @@ os:
     - linux
 
 script:  
-    - go build dempapp.go
+    - go build demoapp.go
 
