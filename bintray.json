@@ -31,8 +31,8 @@
 
     "files":
         [
-        {"includePattern": "build/bin(.*)*/(.*\\.gem)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "gems/$2"},
-        {"includePattern": "build/docs/(.*)", "uploadPattern": "docs/$1"}
+        {"includePattern": "build/opt/demoapp/bin(.*)*/(.*\\.gem)", "excludePattern": ".*/do-not-deploy/.*", "uploadPattern": "gems/$2"},
+        {"includePattern": "build/opt/demoapp/docs/(.*)", "uploadPattern": "docs/$1"}
         ],
     "publish": true
 }
