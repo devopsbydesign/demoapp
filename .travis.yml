@@ -4,6 +4,7 @@ os:
 script:
 - go build demoapp.go
 - mkdir -p build/opt/demoapp/bin
+- mkdir -p build/opt/demoapp/docs
 - mv demoapp build/opt/demoapp/bin
 
 
