@@ -1,7 +1,18 @@
 language: go
-os: 
-    - linux
+os:
+- linux
+script:
+- go build demoapp.go
+- mkdir -p build/opt/demoapp/bin
+- mv demoapp build/opt/demoapp/bin
 
-script:  
-    - go build demoapp.go
+
+deploy:
+  provider: bintray
+  file: bintray.json
+  user: devopsbydesign
+  key:
+    secure: UPMvzZ0M129CNAjh68D+NOZJsizyjBWfod4Icyy9SXFysFdo2bcnimhD2xymR8Ps4tW20hcGke/sFoBVa76Uw4FlmS+4xqCFBEWBnQ8HiUAOGWUzyJRsIwtTLG9pSQ2MeqQCiAZUAUJngqso98n6wPMZIwNY7x6gA2JVzv63gY2tYGoBS+nRt6BO2attROl/LDaYhaZmMGXOBAGVeiySHlBvDV4pKt2ro8T6YWTZTJjvWySA6gTsI+77LGUzvn5xFqRS3TcQ+tcJkAcvzVkXzClm/dEpd4YMARP7dOkyTb5iYFBIWvDqqkL3C1QpERUYQnssV+brfLL8sCr//DzIvcsy/ok3VuJYaaknAI3jt3TlepiUPqFNYRqLfH3hGkNLWmJvZYsxwNS3iQfmEeYQhM0HXiSODPR2d2q3uJQt9qji2OfotHJZN1abphqfpURv8w8uIcjX6m0/7lAgr1SWLl+ai+FSSFnGybYwVRTYx2jQfmBqbPZ+NfvaHm64nnnyPuj47jNhcWGWZrYV8h3SZCu933QXHKmilEj9JBIA0A+qNGJHmRzu1KFb7IsnwgbnBP+B48Wq9A+OazEgP+/eQtXEKsAqmKz3kk15ilBGFg5/8lUHYjOs62o/nMo4VS7qei6MJBDkjuQI7hgZT95SCwJziyu9/7IbcFFKzLScNNk=
+  on:
+    all_branches: true
 
