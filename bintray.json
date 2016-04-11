@@ -1,7 +1,7 @@
 {
     "package": {
         "name": "demoapp",
-        "repo": "devopsbydesign",
+        "repo": "rpm",
         "subject": "devopsbydesign",
         "desc": "demo app for CD",
         "website_url": "http://github.com/devopsbydesign",
